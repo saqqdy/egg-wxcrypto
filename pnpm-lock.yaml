@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^1.1.0
     version: 1.1.0
   egg:
-    specifier: ^3.17.1
-    version: 3.17.1
+    specifier: ^3.17.2
+    version: 3.17.2
   egg-bin:
     specifier: ^6.4.1
     version: 6.4.1
@@ -3113,8 +3113,8 @@ packages:
       - supports-color
     dev: true
 
-  /egg@3.17.1:
-    resolution: {integrity: sha512-m8+Guu0/W98ISu2aRbuRcvOuTg+DJQMQWof3HNH6xiiIeCPKWcF65Ybs5ETsewORKQJ4r3N/dkK6XGLf4qN1mg==}
+  /egg@3.17.2:
+    resolution: {integrity: sha512-5HcZ16d+yCe1rNYKt93S3zzLMtfPZlWlQPRd2GsTp2Wf5B/FO5ITTMwYCjhVvMy0RC9b5a9ok64O22FUINDYpA==}
     engines: {node: '>= 14.20.0'}
     dependencies:
       '@types/accepts': 1.3.5
