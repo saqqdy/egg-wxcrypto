@@ -16,8 +16,6 @@
 
 <div style="text-align: center; margin-bottom: 20px;" align="center">
 
-See [parameter](https://github.com/node-modules/parameter) for more information such as custom rule.
-
 </div>
 
 ## Install
@@ -41,8 +39,6 @@ exports.wxcrypto = {
 ```
 
 ## Configurations
-
-egg-wxcrypto support all parameter's configurations, check [parameter documents](https://github.com/node-modules/parameter) to get more information.
 
 ```js
 // {app_root}/config/config.default.js
