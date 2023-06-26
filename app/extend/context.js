@@ -1,27 +1,28 @@
 module.exports = {
 	/**
-	 * de
+	 * decryptWxMsg
+	 *
+	 * @param {object} data wx encrypt data
+	 * @param {object} options wxcrypto options
+	 * @return {object} result
 	 */
-	wxcrypto(rules, data) {
+	async decryptWxMsg(data, options) {
 		data = data || this.request.body
-		// const errors = this.app.validator.validate(rules, data)
 
-		// if (errors) {
-		// 	let msg = 'Validation Failed'
-		// 	if (Array.isArray(errors)) {
-		// 		msg +=
-		// 			' => ' +
-		// 			errors
-		// 				.map(
-		// 					({ code, field, message }) =>
-		// 						`[${code}] field: ${field} | message: ${message}`
-		// 				)
-		// 				.join('; ')
-		// 	}
-		// 	this.throw(422, msg, {
-		// 		code: 'invalid_param',
-		// 		errors
-		// 	})
-		// }
+		const { encrypt, timestamp, nonce } = data
+		return await this.app.wxcrypto.decrypt(encrypt, timestamp, nonce, options)
+	},
+
+	/**
+	 * decryptWxMsg
+	 *
+	 * @param {object} data wx encrypt data
+	 * @param {object} options wxcrypto options
+	 * @return {object} result
+	 */
+	async encryptWxMsg(data, options) {
+		data = data || this.request.body
+
+		return await this.app.wxcrypto.encrypt(data, options)
 	}
 }

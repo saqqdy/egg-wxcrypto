@@ -28,7 +28,8 @@
 		"prettier": "prettier --write \"**/*.{js,ts,json,md}\""
 	},
 	"dependencies": {
-		"js-cool": "^4.7.0"
+		"js-cool": "^4.7.0",
+		"node-wxcrypto": "^2.0.1"
 	},
 	"devDependencies": {
 		"@eslint-sets/eslint-config-basic": "^5.5.0",
