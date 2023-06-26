@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"js-cool": "^4.7.0",
-		"node-wxcrypto": "^2.0.1"
+		"node-wxcrypto": "^3.0.0"
 	},
 	"devDependencies": {
 		"@eslint-sets/eslint-config-basic": "^5.5.0",
