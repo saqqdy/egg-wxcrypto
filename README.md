@@ -40,6 +40,8 @@ exports.wxcrypto = {
 
 ## Configurations
 
+egg-wxcrypto support all node-wxcrypto's configurations, check [node-wxcrypto documents](https://github.com/saqqdy/node-wxcrypto) to get more information.
+
 ```js
 // {app_root}/config/config.default.js
 exports.wxcrypto = {
@@ -52,6 +54,29 @@ exports.wxcrypto = {
   //   xmlOptions: {} // 透传用于解析 xml 字符串的配置
   // }
 }
+```
+
+### Use in service
+
+```js
+// {app_root}/app/service/home.js
+const { Service } = require('egg')
+
+class HomeService extends Service {
+  async index() {
+    const { ctx, app } = this
+    const data = {
+      // ...
+    }
+    await ctx.decryptWxMsg(this.request.body, options) // decrypt
+    await ctx.encryptWxMsg(data, options) // encrypt
+    // or
+    await app.wxcrypto.decrypt(encrypt, timestamp, nonce, options) // decrypt
+    await app.wxcrypto.encrypt(data, options) // encrypt
+  }
+}
+
+module.exports = HomeService
 ```
 
 ## Change logs

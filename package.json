@@ -1,7 +1,7 @@
 {
 	"name": "egg-wxcrypto",
 	"description": "扩展支持微信消息加解密nodejs版本的egg插件",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"packageManager": "pnpm@8.6.3",
 	"eggPlugin": {
 		"name": "wxcrypto"
@@ -66,15 +66,14 @@
 				"mocha"
 			],
 			"allowedVersions": {
-				"eslint": ">= 8.0.0",
-				"fsevents": ">= 2.0.0"
+				"eslint": ">= 8.0.0"
 			}
 		}
 	},
 	"keywords": [
 		"eggjs",
 		"eggPlugin",
-		"egg-wxcrypto",
+		"node-wxcrypto",
 		"egg-plugin",
 		"wxcrypto",
 		"egg-wxcrypto"
