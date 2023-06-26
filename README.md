@@ -43,28 +43,16 @@ exports.wxcrypto = {
 ```js
 // {app_root}/config/config.default.js
 exports.wxcrypto = {
-  // convert: false,
-  // wxcryptoRoot: false,
+  // token: '',
+  // aesKey: '',
+  // appId: '',
+  // options: {
+  //   normalizeTags: true,
+  //   buildXmlOptions: {}, // 透传用于生成 xml 字符串的配置
+  //   xmlOptions: {} // 透传用于解析 xml 字符串的配置
+  // }
 }
 ```
-
-module.exports = HomeController
-
-````
-
-## Extend Rules
-
-- app.js
-
-```js
-app.validator.addRule('object', (rule, value) => {
-  try {
-    JSON.parse(value)
-  } catch (err) {
-    return 'must be json string'
-  }
-})
-````
 
 ## Change logs
 
