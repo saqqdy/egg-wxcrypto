@@ -1,3 +1,5 @@
+const { buildXMLSync, parseXMLSync } = require('node-wxcrypto')
+
 module.exports = {
 	/**
 	 * decryptWxMsg
@@ -24,5 +26,8 @@ module.exports = {
 		data = data || this.request.body
 
 		return await this.app.wxcrypto.encrypt(data, options)
-	}
+	},
+
+	buildXML: buildXMLSync,
+	parseXML: parseXMLSync
 }

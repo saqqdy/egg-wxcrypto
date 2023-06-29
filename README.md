@@ -79,6 +79,16 @@ class HomeService extends Service {
 module.exports = HomeService
 ```
 
+### Extended Context Methods
+
+```js
+// {app_root}/app/service/home.js
+const { ctx } = this
+
+ctx.buildXML(data, options) // data => xmlString
+ctx.parseXML(xmlString, options) // xmlString => data
+```
+
 ## Change logs
 
 [Change logs](./CHANGELOG.md)
